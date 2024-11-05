@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>collection - Blessed Uj</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <header>
+    <h1>Our Wine Collection</h1>
+    
+          <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+              <ul id="nav-links">
+                  <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="collection.html">Wine Collection</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+              </ul>
+          </nav>
+      
+          
+  
+    
+  </header>
+  
+
+  <section class="wine-collection">
+    <h2>Available Wines</h2>
+    <div class="wine-gallery">
+      <div class="wine-item">
+        <img src="wine1.jpg" alt="Wine Bottle 1">
+        <h3>Chardonnay</h3>
+        <p>Price: $25</p>
+      </div>
+      <div class="wine-item">
+        <img src="wine2.jpg" alt="Wine Bottle 2">
+        <h3>Merlot</h3>
+        <p>Price: $20</p>
+      </div>
+      <div class="wine-item">
+        <img src="wine3.jpg" alt="Wine Bottle 3">
+        <h3>Cabernet Sauvignon</h3>
+        <p>Price: $30</p>
+      </div>
+    </div>
+      <!-- Gallery Section -->
+      <section id="gallery" class="gallery">
+        <div class="gallery-container">
+            <img src="images/wine1.png" alt="Wine Image 1" class="gallery-image">
+            <img src="images/wine2.png" alt="Wine Image 2" class="gallery-image">
+            <img src="images/wine3.png" alt="Wine Image 3" class="gallery-image">
+            <img src="images/wine4.png" alt="Wine Image 4" class="gallery-image">
+        </div>
+    </section>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Wine Haven</p>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    // Check if user is logged in
+    if (!localStorage.getItem('loggedIn')) {
+        // Redirect to login page if not logged in
+        window.location.href = 'login.html';
+    }
+    function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            const hamburger = document.querySelector('.hamburger');
+
+            navLinks.classList.toggle('show');
+            hamburger.classList.toggle('open'); // Add or remove the open class
+        }
+
+        
+        // Check if user is logged in
+        if (!localStorage.getItem('loggedIn')) {
+            // Redirect to login page if not logged in
+            window.location.href = 'login.html';
+        }
+    
+
+
+</script>
+</body>
+</html>

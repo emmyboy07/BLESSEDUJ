@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Blessed Uj</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  
+  <header>
+    <h1>Wine Haven Blog</h1>
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="collection.html">Wine Collection</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+  </header>
+  
+
+  <section class="blog-posts">
+    <article>
+      <h2>5 Tips for Pairing Wine with Food</h2>
+      <p>Date: [Insert Date]</p>
+      <p>Wine pairing can elevate your dining experience. Here are our top 5 tips to make the most of your meal...</p>
+    </article>
+    <article>
+      <h2>The History of Wine Making</h2>
+      <p>Date: [Insert Date]</p>
+      <p>Wine making has a rich history that dates back thousands of years. Join us as we explore its origins...</p>
+    </article>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Wine Haven</p>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    // Check if user is logged in
+    if (!localStorage.getItem('loggedIn')) {
+        // Redirect to login page if not logged in
+        window.location.href = 'login.html';
+    }
+    function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            const hamburger = document.querySelector('.hamburger');
+
+            navLinks.classList.toggle('show');
+            hamburger.classList.toggle('open'); // Add or remove the open class
+        }
+</script>
+</body>
+</html>

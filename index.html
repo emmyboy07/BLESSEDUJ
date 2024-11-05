@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blessed Uj</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <header class="hero-section">
+    <h1 class="hero-title">Welcome to <br> Blessed Uj Global Resources</h1>
+    <p class="hero-subtitle">Discover the finest wines from around the world.</p>
+    <a href="collection.html" class="cta-button">Explore Our Collection</a>
+  </header>
+  <header>
+        <nav>
+          <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="collection.html">Wine Collection</a></li>
+         <li><a href="#" id="logout-link">Logout</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    
+        
+  </header>
+
+  <section id="explore" class="wine-collection">
+    <h2>Our Exclusive Wines</h2>
+    <div class="wine-gallery">
+      <div class="wine-item">
+        <img src="images/wine1.png" alt="Wine Bottle 1">
+        <h3>Hennessy</h3>
+      </div>
+      <div class="wine-item">
+        <img src="images/wine2.png" alt="Wine Bottle 2">
+        <h3>Andre</h3>
+      </div>
+      <div class="wine-item">
+        <img src="images/wine3.png" alt="Wine Bottle 3">
+        <h3>William Lawson's</h3>
+      </div>
+    </div>
+    <div class="wine-item">
+      <img src="images/wine4.png" alt="Wine Bottle 4">
+      <h3>Imperial Blue</h3>
+    </div>
+    <div class="wine-item">
+      <img src="images/wine5.png" alt="Wine Bottle 5">
+      <h3>Campari Big Size</h3>
+    </div>
+    <div class="wine-item">
+      <img src="images/wine6.png" alt="Wine Bottle 6">
+      <h3>Jack Williams</h3>
+    </div>
+  </section>
+  <section class="cta-section">
+    <h2>Join Our Wine Club</h2>
+    <p>Receive exclusive offers and updates on the latest arrivals.</p>
+    <button class="subscribe-button">Subscribe</button>
+
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Blessed Uj Global Resources</p>
+    <div class="social-icons">
+      <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"></a>
+      <a href="https://wa.me/message/WUSXWOWEOJTGA1"><img src="images/icon-Whatsapp.svg" alt="Whatsapp"></a>
+    </div>
+  </footer>
+ 
+
+  <script src="script.js"></script>
+  <script>
+    // Check if user is logged in
+    if (!localStorage.getItem('loggedIn')) {
+        // Redirect to login page if not logged in
+        window.location.href = 'login.html';
+    }
+    function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            const hamburger = document.querySelector('.hamburger');
+
+            navLinks.classList.toggle('show');
+            hamburger.classList.toggle('open'); // Add or remove the open class
+        }
+
+   // Check login status
+   if (localStorage.getItem('loggedIn') !== 'true') {
+            window.location.href = 'login.html'; // Redirect to login if not logged in
+        }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,658 @@
+/* Reset and Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background: #f3f3f3; /* Light background for contrast */
+}
+
+/* Header and Navigation */
+header {
+  background: linear-gradient(135deg, #5b3e1b, #a65e1c); /* Gradient for depth */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.subscribe-button {
+  padding: 20px 40px; /* Adjust as needed */
+  font-size: 20px; /* Larger font size */
+  /* Other styles */
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f2b05c; /* Gold color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Hero Section */
+.hero-section {
+  background: url('images/hero-wine.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 4rem;
+  z-index: 2;
+  animation: fadeInDown 1.5s ease-out forwards;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for text clarity */
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  z-index: 2;
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #8a2b2b; /* Main button color */
+  border: none;
+  cursor: pointer;
+  border-radius: 25px; /* Rounded button */
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  z-index: 2;
+  animation: fadeIn 2.5s ease-out forwards;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background-color: #a14242; /* Darker shade on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* General Section Styles */
+section {
+  padding: 50px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px; /* Rounded corners for sections */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for sections */
+  margin: 20px 0; /* Margin for spacing */
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #5b3e1b; /* Rich brown */
+}
+
+/* Wine Gallery */
+.wine-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+}
+
+.wine-item {
+  text-align: center;
+  transition: transform 0.3s, opacity 0.3s;
+  border: 1px solid #ddd; /* Light border for distinction */
+  border-radius: 8px;
+  overflow: hidden; /* Ensure images do not overflow */
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.wine-item img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-bottom: 4px solid #5b3e1b; /* Accent border below images */
+}
+
+.wine-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Contact Form */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px; /* Limit width for better form appearance */
+  margin: auto; /* Center form */
+}
+
+.contact-form label {
+  margin: 10px 0;
+  font-weight: bold; /* Bold labels */
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc; /* Thicker border */
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  border-color: #8a2b2b; /* Highlight border on focus */
+  box-shadow: 0 0 5px rgba(138, 43, 43, 0.5); /* Glow effect */
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #8a2b2b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px; /* Rounded button */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #6f2323;
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* Blog Section */
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between blog posts */
+}
+
+.blog-posts article {
+  padding: 20px;
+  background: #fff; /* White background for articles */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.blog-posts h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.blog-posts article:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.footer .social-icons a img {
+  width: 24px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.footer .social-icons a:hover img {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .wine-gallery {
+    grid-template-columns: 1fr; /* Stack items vertically */
+  }
+
+  nav ul li {
+    display: block; /* Stack nav items */
+    margin: 10px 0; /* Margin between items */
+  }
+
+  .contact-form input, 
+  .contact-form textarea {
+    width: calc(100% - 20px); /* Full width minus padding */
+  }
+}
+
+/* Login Section */
+.login-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px; /* Rounded corners for sections */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for sections */
+  max-width: 400px; /* Limit width for better form appearance */
+  margin: 50px auto; /* Centering the section */
+}
+
+.login-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #5b3e1b; /* Rich brown */
+}
+
+.login-form label {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold; /* Bold labels */
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc; /* Thicker border */
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #8a2b2b; /* Highlight border on focus */
+  box-shadow: 0 0 5px rgba(138, 43, 43, 0.5); /* Glow effect */
+}
+
+.login-form button {
+  padding: 10px 20px;
+  background-color: #8a2b2b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px; /* Rounded button */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #6f2323;
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* Link styling */
+.login-section p a {
+  color: #8a2b2b; /* Link color */
+  text-decoration: underline;
+}
+
+/* Signup Section */
+.signup-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px; /* Rounded corners for sections */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for sections */
+  max-width: 400px; /* Limit width for better form appearance */
+  margin: 50px auto; /* Centering the section */
+}
+
+.signup-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #5b3e1b; /* Rich brown */
+}
+
+.signup-form label {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold; /* Bold labels */
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc; /* Thicker border */
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signup-form input:focus {
+  border-color: #8a2b2b; /* Highlight border on focus */
+  box-shadow: 0 0 5px rgba(138, 43, 43, 0.5); /* Glow effect */
+}
+
+.signup-form button {
+  padding: 10px 20px;
+  background-color: #8a2b2b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px; /* Rounded button */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.signup-form button:hover {
+  background-color: #6f2323;
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* Link styling */
+.signup-section p a {
+  color: #8a2b2b; /* Link color */
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  h1 {
+      font-size: 24px; /* Adjust heading size for mobile */
+  }
+
+  p {
+      font-size: 16px; /* Adjust paragraph font size for mobile */
+      margin: 0 0 15px; /* Adjust margins for better spacing */
+  }
+}
+img {
+  max-width: 100%; /* Ensure images scale down */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Base styles for all devices */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* Header and Navbar styles */
+header {
+  background: #5c3d21;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hamburger {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+/* Hamburger icon lines */
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Position each line of the hamburger icon */
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 10px; }
+.hamburger span:nth-child(3) { top: 20px; }
+
+/* Transform to "X" when open */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+/* Navbar styling */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+  max-height: 0; /* Hidden by default */
+  opacity: 0;    /* Transparent by default */
+}
+
+/* Desktop view - show nav links inline, hide hamburger */
+@media (min-width: 768px) {
+  .hamburger {
+      display: none; /* Hide hamburger icon on desktop */
+  }
+
+  nav ul {
+      display: flex; /* Display nav links inline */
+      max-height: none;
+      opacity: 1;
+      position: static;
+  }
+
+  nav ul li {
+      margin: 0 15px;
+  }
+}
+
+/* Mobile view - toggle menu and display hamburger */
+@media (max-width: 767px) {
+  .hamburger {
+      display: block; /* Show hamburger icon */
+  }
+
+  nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: #5c3d21;
+      z-index: 1;
+  }
+
+  /* Show menu when .show class is added */
+  nav ul.show {
+      max-height: 300px;
+      opacity: 1;
+  }
+
+  nav ul li {
+      text-align: center;
+      margin: 10px 0;
+  }
+}
+
+/* Gallery Section */
+.gallery {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.gallery-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Adjust max width as needed */
+  margin: 0 auto;
+  overflow: hidden; /* Hide overflow */
+}
+
+.gallery-image {
+  width: 100%; /* Make images responsive */
+  height: auto;
+  display: none; /* Hide all images by default */
+}
+
+.gallery-image:first-child {
+  display: block; /* Show the first image initially */
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #b30000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Signup Container */
+.signup-container {
+  max-width: 400px; /* Maximum width of the signup form */
+  margin: 50px auto; /* Center the form in the middle of the page */
+  padding: 20px; /* Space inside the container */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center text */
+}
+
+/* Header for the Signup Form */
+.signup-container h2 {
+  margin-bottom: 20px; /* Space below the heading */
+  font-size: 1.8em; /* Larger font size for the heading */
+  color: #333; /* Dark gray color for the heading */
+}
+
+/* Input Fields */
+.signup-container input {
+  width: 100%; /* Full width of the container */
+  padding: 10px; /* Padding for input fields */
+  margin-bottom: 15px; /* Space below input fields */
+  border: 1px solid #ccc; /* Light gray border for inputs */
+  border-radius: 5px; /* Rounded corners for inputs */
+  font-size: 1em; /* Font size for input text */
+}
+
+/* Signup Button */
+.signup-container button {
+  width: 100%; /* Full width of the button */
+  padding: 10px; /* Padding inside the button */
+  background-color: #b30000; /* Wine red color for the button */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1em; /* Font size for button text */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Button Hover Effect */
+.signup-container button:hover {
+  background-color: #a50000; /* Darker red when hovered */
+}
+
+/* Error Message */
+#error-message {
+  margin-top: 10px; /* Space above the error message */
+  font-size: 0.9em; /* Smaller font size for error message */
+  color: red; /* Red color for error message */
+}
+
+/* Link to Login */
+.signup-container p {
+  margin-top: 15px; /* Space above the paragraph */
+  font-size: 0.9em; /* Smaller font size for text */
+}
+
+.signup-container a {
+  color: #b30000; /* Wine red color for the link */
+  text-decoration: none; /* Remove underline from link */
+}
+
+.signup-container a:hover {
+  text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* Style for the sign-up link in the login form */
+.login-container p a {
+  color: #b30000; /* Wine red color */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-container p a:hover {
+  text-decoration: underline;
+}
